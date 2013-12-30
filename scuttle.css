@@ -419,21 +419,21 @@ p.paging {
 }
 p.paging a,
 p.paging span.disable {
-  background: #888;
+  background: #fff;
   color: #FFF;
   display: inline;
   margin-right: .5em;
   padding: .25em 1em;
 }
 p.paging a:hover {
-  background: #666;
+  background: #fff;
 }
 p.paging span {
   display: none;
 }
 p.paging span.disable {
-  background: #DDD;
-  color: #AAA;
+  background: #fff;
+  color: #000;
 }
 div.collapsible p.tags {
   line-height: 2.25em;
