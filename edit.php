@@ -85,7 +85,7 @@ if (!($row = $bookmarkservice->getBookmark(intval($bookmark), true))) {
     $tplVars['popup'] = (isset($_GET['popup'])) ? $_GET['popup'] : null;
     $tplVars['row'] =& $row;
     $tplVars['formaction']  = createURL('edit', $bookmark);
-    $tplVars['btnsubmit'] = T_('Save Changes');
+    $tplVars['btnsubmit'] = T_('Salvesta muudatused');
     $tplVars['showdelete'] = true;
     $tplVars['referrer'] = $_SERVER['HTTP_REFERER'];
     $templateservice->loadTemplate('editbookmark.tpl', $tplVars);

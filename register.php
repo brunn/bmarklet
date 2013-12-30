@@ -101,7 +101,7 @@ $_SESSION['token']      = $token;
 $_SESSION['token_time'] = time();
 
 $tplVars['loadjs']     = TRUE;
-$tplVars['subtitle']   = T_('Register');
+#$tplVars['subtitle']   = T_('Register');
 $tplVars['formaction'] = createURL('register');
 $tplVars['token']      = $token;
 $templateservice->loadTemplate('register.tpl', $tplVars);

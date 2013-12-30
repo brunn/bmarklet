@@ -10,6 +10,7 @@ if ($userservice->isLoggedOn()) {
         <li><a href="<?php echo createURL('watchlist', $cUsername); ?>"><?php echo T_('nimekiri'); ?></a></li>
         <li><a href="<?php echo createURL('bookmarks', $cUsername . '?action=add'); ?>"><?php echo T_('Lisa järjehoidja'); ?></a></li>
  	<li><a href="<?php echo createURL('populartags'); ?>"><?php echo T_('sildid'); ?></a></li>
+ 	<li><a href="<?php echo createURL('profile', $cUsername); ?>"><?php echo T_('profiil'); ?></a></li>
         <li><a href="<?php echo $GLOBALS['root']; ?>?action=logout"><?php echo T_('Välju'); ?></a></li>
     </ul>
 

@@ -4,7 +4,7 @@
   font-family: helvetica, arial, sans-serif;
 }
 a {
-  color: #47A;
+  color: #000;
   text-decoration: none;
 }
 a:hover {
@@ -212,7 +212,7 @@ div#sidebar {
   width: 25%;
 }
 div#sidebar a {
-  color: #47A;/*lingi värv*/
+  color: #000;/*lingi värv*/
 }
 div#sidebar a:hover {
   color: #773;

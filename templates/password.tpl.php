@@ -2,7 +2,7 @@
 $this->includeTemplate($GLOBALS['top_include']);
 ?>
 
-<p><?php echo sprintf(T_('If you have forgotten your password, %s can generate a new one. Enter the username and e-mail address of your account into the form below and we will e-mail your new password to you.'), $GLOBALS['sitename']); ?></p>
+<p><?php echo sprintf(T_('Sisesta e-mail ja kasutajanimi.'), $GLOBALS['sitename']); ?></p>
 
 <form action="<?php echo $formaction; ?>" method="post">
     <table>

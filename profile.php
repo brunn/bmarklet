@@ -54,7 +54,7 @@ if ($user) {
 }
 
 if ($user == $currentUsername) {
-    $title = T_('My Profile');
+   # $title = T_('My Profile');
 } else {
     $title = T_('Profile') .': '. $user;
 }

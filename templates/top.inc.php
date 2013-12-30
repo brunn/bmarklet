@@ -1,9 +1,9 @@
 <?php header('Content-Type: text/html; charset=utf-8'); ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
 <head>
     <title><?php echo filter($GLOBALS['sitename'] . (isset($pagetitle) ? ': ' . $pagetitle : '')); ?></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <link rel="icon" type="image/png" href="<?php echo $GLOBALS['root']; ?>icon.png" />
     <link rel="stylesheet" type="text/css" href="<?php echo $GLOBALS['root']; ?>scuttle.css" />
     <?php

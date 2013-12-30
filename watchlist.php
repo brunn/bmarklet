@@ -99,7 +99,7 @@ if ($user) {
     $tplVars['nav_url'] = createURL('watchlist', '%s/%s%s');
 
     if ($user == $currentUsername) {
-        $title = T_('My Watchlist');
+       # $title = T_('My Watchlist');
     } else {
         $title = T_('Watchlist') .': '. $user;
     }

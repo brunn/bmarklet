@@ -44,7 +44,7 @@ if (!$login) {
         header('Location: '. createURL('bookmarks', $cUsername));
     }
 
-    $tplVars['subtitle']    = T_('Log In');
+   # $tplVars['subtitle']    = T_('Log In');
     $tplVars['formaction']  = createURL('login');
     $tplVars['querystring'] = filter($_SERVER['QUERY_STRING']);
     $templateservice->loadTemplate('login.tpl', $tplVars);

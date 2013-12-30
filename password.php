@@ -66,7 +66,7 @@ if ($_POST['submitted']) {
 }
 
 $templatename = 'password.tpl';
-$tplVars['subtitle'] = T_('Forgotten Password');
+$tplVars['subtitle'] = T_('Parooli taastamine');
 $tplVars['formaction']  = createURL('password');
 $templateservice->loadTemplate($templatename, $tplVars);
 ?>
