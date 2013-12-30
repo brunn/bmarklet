@@ -6,6 +6,7 @@ if ($userservice->isLoggedOn()) {
 ?>
 
     <ul id="navigation">
+ 	<li><a href="http://brunn.ee">Bitikas</a></li>
         <li><a href="<?php echo createURL('bookmarks', $cUsername); ?>"><?php echo T_('järjehoidjad'); ?></a></li>
         <li><a href="<?php echo createURL('watchlist', $cUsername); ?>"><?php echo T_('nimekiri'); ?></a></li>
         <li><a href="<?php echo createURL('bookmarks', $cUsername . '?action=add'); ?>"><?php echo T_('Lisa järjehoidja'); ?></a></li>
@@ -20,8 +21,8 @@ if ($userservice->isLoggedOn()) {
 
     <ul id="navigation">
      <!---   <li><a href="<?php echo createURL('about'); ?>"><?php echo T_('lehest'); ?></a></li>--->
+ 	<li><a href="http://brunn.ee">Bitikas</a></li>
         <li><a href="<?php echo createURL('populartags'); ?>"><?php echo T_('sildid'); ?></a></li>
-
         <li><a href="<?php echo createURL('login'); ?>"><?php echo T_('logi sisse'); ?></a></li>
         <li><a href="<?php echo createURL('register'); ?>"><?php echo T_('registreeru'); ?></a></li>
     </ul>
