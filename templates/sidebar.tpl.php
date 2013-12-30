@@ -1,3 +1,4 @@
+<!---
 <div id="sidebar">
     <?php
     $size = count($sidebar_blocks);
@@ -11,3 +12,4 @@
     }
     ?>
 </div>
+--->

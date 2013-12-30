@@ -2,12 +2,13 @@
 $this->includeTemplate($GLOBALS['top_include']);
 if ($tags && count($tags) > 0) {
 ?>
-
+<!---
 <p id="sort">
     <?php echo T_("sorteeri:"); ?>
     <a href="?sort=alphabet_asc"><?php echo T_("alfabeetiliselt"); ?></a><span> / </span>
     <a href="?sort=popularity_asc"><?php echo T_("populaarsuse järgi"); ?></a>
 </p>
+--->
 <p class="tags">
 
 <?php

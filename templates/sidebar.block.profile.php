@@ -12,5 +12,7 @@ if (utf8_strlen($userinfo['name']) > 0) {
         <li><a href="<?php echo $userservice->getProfileUrl($userid, $user); ?>"><?php echo T_('Profile'); ?></a> &rarr;</li>
         <li><a href="<?php echo createURL('alltags', $user); ?>"><?php echo T_('Tags'); ?></a> &rarr;</li>
         <li><a href="<?php echo createURL('watchlist', $user); ?>"><?php echo T_('Watchlist'); ?></a> &rarr;</li>
+
+
     </ul>
 </div>
