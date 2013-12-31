@@ -55,7 +55,7 @@ if (count($bookmarks) > 0) {
         // User attribution
         $copy = '';
         if (!isset($user) || isset($watched)) {
-            $copy = ' '. T_('**') .' <a href="'. createURL('bookmarks', $row['username']) .'">'. $row['username'] .'</a>';
+            $copy = ' '. T_('lisaja') .' <a href="'. createURL('bookmarks', $row['username']) .'">'. $row['username'] .'</a>';
         }
 
         // Udders!

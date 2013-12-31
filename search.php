@@ -60,7 +60,7 @@ if (isset($_POST['terms'])) {
     
     // Search terms
     } else {
-        $tplVars['subtitle'] = T_('Otsingu tulemus');
+       # $tplVars['subtitle'] = T_('Otsingu tulemus');
         $selected = ' selected="selected"';
 
          switch ($range) {
