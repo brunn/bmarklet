@@ -8,7 +8,7 @@ $player_root = $root .'includes/player/';
 var deleted = false;
 function deleteBookmark(ele, input) {
   $(ele).hide();
-  $(ele).parent().append("<span><?php echo T_('Are you sure?') ?> <a href=\"#\" onclick=\"deleteConfirmed(this, " + input + "); return false;\"><?php echo T_('Yes'); ?></a> - <a href=\"#\" onclick=\"deleteCancelled(this); return false;\"><?php echo T_('No'); ?></a></span>");
+  $(ele).parent().append("<span><?php echo T_('Oled sa kindel?') ?> <a href=\"#\" onclick=\"deleteConfirmed(this, " + input + "); return false;\"><?php echo T_('jah'); ?></a> - <a href=\"#\" onclick=\"deleteCancelled(this); return false;\"><?php echo T_('ei'); ?></a></span>");
   return false;
 }
 function deleteCancelled(ele) {
