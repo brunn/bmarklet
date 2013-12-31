@@ -31,7 +31,10 @@ switch ($row['bStatus']) {
 </tr>
 <tr>
     <th align="left"><?php echo T_('Kirjeldus'); ?></th>
-    <td><input type="text" name="description" size="75" maxlength="255" value="<?php echo filter($row['bDescription'], 'xml'); ?>" /></td>
+
+<td><textarea  rows="10" tabindex="200" name="description" style="box-sizing: border-box; height: 103px; overflow: hidden;width: 492px;" ><?php echo filter($row['bDescription'], 'xml'); ?></textarea></td>
+
+<!---    <td><input type="text" name="description" size="75" maxlength="255" value="<?php echo filter($row['bDescription'], 'xml'); ?>" /></td>--->
     <td></td>
 </tr>
 <tr>

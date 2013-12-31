@@ -154,7 +154,7 @@ if ($templatename == 'editbookmark.tpl') {
                 'tags' => ($_GET['tags'] ? explode(',', stripslashes($_GET['tags'])) : array())
             );
         }
-        $title = T_('Lisa järjehoidja');
+       # $title = T_('Lisa järjehoidja');
         $tplVars['pagetitle'] = $title;
         $tplVars['subtitle'] = $title;
         $tplVars['btnsubmit'] = T_('Lisa järjehoidja');
