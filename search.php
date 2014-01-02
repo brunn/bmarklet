@@ -54,7 +54,7 @@ if (isset($_POST['terms'])) {
 
     // No search terms
     if (is_null($terms)) {
-        $tplVars['subtitle'] = T_('Otsi järjehoidjaid');
+    #    $tplVars['subtitle'] = T_('Otsi järjehoidjaid');
         $s_start = date('Y-m-d H:i:s', strtotime($dtend .' -'. $defaultRecentDays .' days'));
         $s_end = date('Y-m-d H:i:s', strtotime('tomorrow'));
     

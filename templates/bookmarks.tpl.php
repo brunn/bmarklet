@@ -43,7 +43,7 @@ if (count($bookmarks) > 0) {
         }
         $cats = substr($cats, 0, -2);
         if ($cats != '') {
-            $cats = ' to '. $cats;
+            $cats = '&nbsp;'. $cats;
         }
 
         // Edit and delete links
@@ -55,7 +55,7 @@ if (count($bookmarks) > 0) {
         // User attribution
         $copy = '';
         if (!isset($user) || isset($watched)) {
-            $copy = ' '. T_('lisaja') .' <a href="'. createURL('bookmarks', $row['username']) .'">'. $row['username'] .'</a>';
+            #$copy = ' '. T_('lisaja') .' <a href="'. createURL('bookmarks', $row['username']) .'">'. $row['username'] .'</a>';
         }
 
         // Udders!
@@ -99,9 +99,11 @@ if (count($bookmarks) > 0) {
         echo '<li class="xfolkentry'. $access .'">'."\n";
         echo '<div class="link"><a href="'. $address .'"'. $rel .' class="taggedlink">'. filter($row['bTitle']) ."</a></div>\n";
         if ($row['bDescription'] != '') {
-            echo '<div class="description">'. filter($row['bDescription']) ."</div>\n";
+            echo '<div class="lingiadre">'. filter($row['bAddress']) ."</div>\n";
+	 echo '<div class="description">'. filter($row['bDescription']) ."</div>\n";
         }
-        echo '<div class="meta">'. date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
+       echo '<div class="meta">'. $cats . $copy . $edit ."</div>\n";
+     #  echo '<div class="meta">'. date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
         echo "</li>\n";
     }
     ?>
@@ -125,27 +127,30 @@ if (count($bookmarks) > 0) {
     if (!$page || $page < 2) {
         $page = 1;
         $start = 0;
-        $bfirst = '<span class="disable">'. T_('esimene') .'</span>';
-        $bprev = '<span class="disable">'. T_('viimane') .'</span>';
+      #  $bfirst = '<span class="disable">'. T_('esimene') .'</span>';
+       # $bprev = '<span class="disable">'. T_('viimane') .'</span>';
     } else {
         $prev = $page - 1;
         $prev = 'page='. $prev;
         $start = ($page - 1) * $perpage;
         $bfirst= '<a href="'. sprintf($nav_url, $user, $currenttag, '') . $sortQue .'">'. T_('esimene') .'</a>';
-        $bprev = '<a href="'. sprintf($nav_url, $user, $currenttag, '?') . $prev . $sortAmp .'">'. T_('viimane') .'</a>';
+        $bprev = '<a href="'. sprintf($nav_url, $user, $currenttag, '?') . $prev . $sortAmp .'">'. T_('teine') .'</a>';
     }
     
     // Next
     $next = $page + 1;
     $totalpages = ceil($total / $perpage);
     if (count($bookmarks) < $perpage || $perpage * $page == $total) {
-        $bnext = '<span class="disable">'. T_('edasi') .'</span>';
-        $blast = '<span class="disable">'. T_('tagasi') .'</span>';
+      #  $bnext = '<span class="disable">'. T_('edasi') .'</span>';
+      # $blast = '<span class="disable">'. T_('tagasi') .'</span>';
+       $bnext=  '<a href="'. sprintf($nav_url, $user, $currenttag, '?page=') . $next . $sortAmp .'">'. T_('kolmas') .'</a>';
+       $blast=  '<a href="'. sprintf($nav_url, $user, $currenttag, '?page=') . $totalpages . $sortAmp .'">'. T_('neljas') .'</a>';
+
     } else {
-        $bnext = '<a href="'. sprintf($nav_url, $user, $currenttag, '?page=') . $next . $sortAmp .'">'. T_('edasi') .'</a>';
-        $blast = '<a href="'. sprintf($nav_url, $user, $currenttag, '?page=') . $totalpages . $sortAmp .'">'. T_('tagasi') .'</a>';
+        $bnext = '<a class="lehelingid" href="'. sprintf($nav_url, $user, $currenttag, '?page=') . $next . $sortAmp .'">'. T_('viies') .'</a>';
+        $blast = '<a class="lehelingid"  href="'. sprintf($nav_url, $user, $currenttag, '?page=') . $totalpages . $sortAmp .'">'. T_('kuues') .'</a>';
     }
-    echo '<p class="paging">'. $bfirst .'<span> / </span>'. $bprev .'<span> / </span>'. $bnext .'<span> / </span>'. $blast .'<span> / </span>'. sprintf(T_('Lehekülg %d kuni %d'), $page, $totalpages) .'</p>';
+    echo '<p class="paging">'. $bfirst .'<span> / </span>'. $bprev .'<span> / </span>'. $bnext .'<span> / </span>'. $blast .'<span> / </span>'. sprintf(T_('Lehekülg %d / %d'), $page, $totalpages) .'</p>';
 } else {
 ?>
 

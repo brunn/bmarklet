@@ -42,17 +42,23 @@ switch ($row['bStatus']) {
     <td><input type="text" id="tags" name="tags" size="75" value="<?php echo filter(implode(', ', $row['tags']), 'xml'); ?>" /></td>
     <td>&larr; <?php echo T_('Komaga eraldatult'); ?></td>
 </tr>
+<!---
 <tr>
-    <th align="left"><?php echo T_('Piirangud'); ?></th>
+    <th align="left"><?php #echo T_('Piirangud'); ?></th>
     <td>
-        <select name="status">
+--->
+    <td><input type="hidden" name="status"  value="0" /><?php echo $accessPublic ?></td>
+<!---
+     <select name="status">
             <option value="0"<?php echo $accessPublic ?>><?php echo T_('Avalik'); ?></option>
             <option value="1"<?php echo $accessShared ?>><?php echo T_('Jagatud jälgimisnimekirjaga'); ?></option>
             <option value="2"<?php echo $accessPrivate ?>><?php echo T_('Privaatne'); ?></option>
         </select>
+
     </td>
     <td></td>
 </tr>
+--->
 <tr>
     <td></td>
     <td>

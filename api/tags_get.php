@@ -15,7 +15,7 @@ $userservice =& ServiceFactory::getServiceInstance('UserService');
 $tags =& $tagservice->getTags($userservice->getCurrentUserId());
 
 // Set up the XML file and output all the tags.
-header('Content-Type: text/xml');
+header('Content-Type: text/xml ;charset=UTF-8');
 echo '<?xml version="1.0" standalone="yes" ?'.">\r\n";
 echo "<tags>\r\n";
 foreach ($tags as $row) {

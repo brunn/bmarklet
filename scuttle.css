@@ -169,14 +169,15 @@ html > body ol#bookmarks {
   padding: 0;
 }
 div.link a {
-  color: blue;
+  color: #1e0fbe;
   font-size: medium;
+
 }
 div.link a:visited {
-  color: purple;
+  color: #1e0fbe;
 }
 div.meta {
-  color: #285;
+  color: #ccc;
 }
 div.meta span {
   color: #F00;
@@ -420,7 +421,7 @@ p.paging {
 p.paging a,
 p.paging span.disable {
   background: #fff;
-  color: #FFF;
+  color: #1e0fbe;
   display: inline;
   margin-right: .5em;
   padding: .25em 1em;
@@ -433,7 +434,7 @@ p.paging span {
 }
 p.paging span.disable {
   background: #fff;
-  color: #000;
+  color: #1e0fbe;
 }
 div.collapsible p.tags {
   line-height: 2.25em;
@@ -446,3 +447,20 @@ ul {
   margin-right: 1em;
   width: 75%;
 }
+
+
+div.meta a {
+  color: #000;
+  font-weight: bold;
+}
+
+.lingiadre {
+  color: #006621;
+}
+
+
+.lehelingid
+{
+  color: #1e0fbe;
+}
+

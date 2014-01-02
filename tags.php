@@ -34,7 +34,7 @@ if (!$cat) {
 } else {
     $cattitle = str_replace('+', ' + ', $cat);
 }
-$pagetitle = T_('Võtmesõnad') .': '. $cattitle;
+#$pagetitle = $cattitle;
 
 if ($usecache) {
     // Generate hash for caching on

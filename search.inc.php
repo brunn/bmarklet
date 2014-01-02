@@ -8,7 +8,7 @@
           $currentUsername = $currentUser[$userservice->getFieldName('username')];
           $logged_on = TRUE;
         }
-        if ($logged_on || isset($user)) {
+        if ($logged_on || isset($user) ) {
         ?>
         <td><?php echo T_('otsi' /* Search ... for */); ?></td>
         <td>
