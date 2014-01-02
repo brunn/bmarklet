@@ -34,13 +34,15 @@ if (count($bookmarks) > 0) {
                 $access = ' private';
                 break;
         }
-
+/*ut8 teema*/
         $cats = '';
         $tags = $row['tags'];
         foreach(array_keys($tags) as $key) {
             $tag =& $tags[$key];
-            $cats .= '<a href="'. sprintf($cat_url, filter($user, 'url'), filter($tag, 'url')) .'" rel="tag">'. filter($tag) .'</a>, ';
-        }
+          $cats .= '<a class="sildid" href="'. sprintf($cat_url, filter($user, 'url'), filter($tag, 'url')) .'" rel="tag">'. filter($tag) .'</a>, ';
+  #         $cats .= '<a class="sildid" href="'. sprintf($cat_url, filter($user, 'url'), filter($tag, 'url')) .'" rel="tag">'. $cat_url.'#'. $user.'#'. $tag.'</a>, ';
+  
+       }
         $cats = substr($cats, 0, -2);
         if ($cats != '') {
             $cats = '&nbsp;'. $cats;
@@ -102,7 +104,7 @@ if (count($bookmarks) > 0) {
             echo '<div class="lingiadre">'. filter($row['bAddress']) ."</div>\n";
 	 echo '<div class="description">'. filter($row['bDescription']) ."</div>\n";
         }
-       echo '<div class="meta">'. $cats . $copy . $edit ."</div>\n";
+       echo '<div class="meta">'. $cats . $copy . $edit ."</div>";
      #  echo '<div class="meta">'. date($GLOBALS['shortdate'], strtotime($row['bDatetime'])) . $cats . $copy . $edit ."</div>\n";
         echo "</li>\n";
     }
