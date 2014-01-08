@@ -23,7 +23,7 @@ function convertTag($tag, $direction = 'out') {
 }
 
 function filter($data, $type = NULL) {
-/*  
+
   if (is_string($data)) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -41,7 +41,7 @@ function filter($data, $type = NULL) {
             $row = filter($row, $type);
         }
     }
-*/
+
     return $data;
 }
 

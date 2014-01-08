@@ -15,6 +15,7 @@ switch ($row['bStatus']) {
         $accessPrivate = ' selected="selected"';
         break;
 }
+echo 'NB! Eelnevalt selekteeritud tekst võetakse kirjeldusse automaatselt kaasa!';
 ?>
 
 <form action="<?php echo $formaction; ?>" method="post">
