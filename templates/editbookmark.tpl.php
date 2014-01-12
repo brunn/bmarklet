@@ -49,7 +49,7 @@ echo 'NB! Eelnevalt selekteeritud tekst võetakse kirjeldusse automaatselt kaasa
     <td>
 --->
     <td><input type="hidden" name="status"  value="0" /><?php echo $accessPublic ?></td>
-<!---
+
      <select name="status">
             <option value="0"<?php echo $accessPublic ?>><?php echo T_('Avalik'); ?></option>
             <option value="1"<?php echo $accessShared ?>><?php echo T_('Jagatud jälgimisnimekirjaga'); ?></option>
@@ -59,7 +59,7 @@ echo 'NB! Eelnevalt selekteeritud tekst võetakse kirjeldusse automaatselt kaasa
     </td>
     <td></td>
 </tr>
---->
+
 <tr>
     <td></td>
     <td>
