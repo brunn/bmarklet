@@ -24,3 +24,5 @@ $templateservice =& ServiceFactory::getServiceInstance('TemplateService');
 $tplVars             = array();
 #$tplVars['subtitle'] = T_('About');
 $templateservice->loadTemplate('about.tpl', $tplVars);
+
+//Muudame about lehte
